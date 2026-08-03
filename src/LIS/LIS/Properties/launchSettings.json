@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LIS": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
