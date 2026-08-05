@@ -8,8 +8,6 @@
 
 Before running the application, ensure the following software is installed on your machine.
 
-### Backend
-
 - .NET 10 SDK
 - Visual Studio 2022 (17.14 or later) or Visual Studio Code
 - Git
