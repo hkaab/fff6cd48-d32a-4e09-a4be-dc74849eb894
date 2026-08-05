@@ -22,9 +22,15 @@ jobs:
       working-directory: src/LIS/LIS
     - name: Build
       run: dotnet build --no-restore
-      working-directory: src/LIS/LIS
+      working-directory: src/LIS/LIS  
+    
     - name: Test
-      run: dotnet test --no-build --no-restore  /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/coverage
+      run: |
+        dotnet test \
+          --no-build \
+          --no-restore \
+          --collect:"XPlat Code Coverage" \
+          -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
       working-directory: tests/UnitTests
     - name: Upload Coverage Report
       uses: actions/upload-artifact@v4
@@ -35,15 +41,15 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: coverage-results
-        path: 'coverage.cobertura.xml'
+        path: '**/coverage.cobertura.xml'
     - name: Install ReportGenerator
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
     - name: Generate Coverage Report
       run: |
         reportgenerator \
-        -reports:**/TestResults/coverage.cobertura.xml \
-        -targetdir:coveragereport \
-        -reporttypes:Html
+          -reports:"**/coverage.cobertura.xml" \
+          -targetdir:"coveragereport" \
+          -reporttypes:"Html"
     - name: Find coverage files
       run: |
         find . -name "coverage.cobertura.xml"
@@ -51,11 +57,3 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         files: '**/coverage.cobertura.xml'
-      
-
-
-
-
-
-
-
