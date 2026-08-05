@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  consoleapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: greedy-naive-lis
+    restart: "no"
+    stdin_open: true
+    tty: true
