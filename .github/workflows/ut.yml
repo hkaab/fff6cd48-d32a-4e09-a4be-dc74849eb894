@@ -10,8 +10,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    steps:
+  steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
@@ -23,7 +22,12 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
       working-directory: src/LIS/LIS  
-    
+    - name: Check test directory
+      run: |
+        pwd
+        ls -la
+        find . -name "*.csproj"
+      working-directory: tests/UnitTests
     - name: Test
       run: dotnet test --no-build --no-restore  --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
       working-directory: tests/UnitTests
