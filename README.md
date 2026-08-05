@@ -1,4 +1,4 @@
-# Todo App
+# Longest increasing subsequence
 ![Build](https://github.com/hkaab/fff6cd48-d32a-4e09-a4be-dc74849eb894/actions/workflows/ci.yml/badge.svg)
 ![Build](https://github.com/hkaab/fff6cd48-d32a-4e09-a4be-dc74849eb894/actions/workflows/ut.yml/badge.svg)
 ![codecov](https://codecov.io/gh/hkaab/fff6cd48-d32a-4e09-a4be-dc74849eb894/branch/main/graph/badge.svg)
