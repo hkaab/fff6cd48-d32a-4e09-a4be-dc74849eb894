@@ -33,9 +33,6 @@ cd src/LIS/LIS
 dotnet restore
 dotnet run 6 1 5 9 2
 ```
-
-Angular app: `http://localhost:4200`
-
 ## Run using Docker
 
 ```bash

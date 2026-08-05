@@ -3,7 +3,7 @@ services:
   consoleapp:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: src/LIS/LIS/Dockerfile
     container_name: greedy-naive-lis
     restart: "no"
     stdin_open: true
