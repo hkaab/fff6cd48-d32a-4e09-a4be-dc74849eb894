@@ -46,7 +46,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput1()
         {
-            string input = File.ReadAllText("input\\longinput1.txt");
+            string input = File.ReadAllText(Path.Combine("input","longinput1.txt"));
             string expected = "1710 2461 9288 10195 10431 12485";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -54,7 +54,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput2()
         {
-            string input = File.ReadAllText("input\\longinput2.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput2.txt"));
             string expected = "10298 10897 12291 15037 18446 23435 25333 27266";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -62,7 +62,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput3()
         {
-            string input = File.ReadAllText("input\\longinput3.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput3.txt"));
             string expected = "3862 16353 22813 28735";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -70,7 +70,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput4()
         {
-            string input = File.ReadAllText("input\\longinput4.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput4.txt"));
             string expected = "11084 11970 24975 30922";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -78,7 +78,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput5()
         {
-            string input = File.ReadAllText("input\\longinput5.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput5.txt"));
             string expected = "3808 3908 10386 19306";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -86,7 +86,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput6()
         {
-            string input = File.ReadAllText("input\\longinput6.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput6.txt"));
             string expected = "125 1841 5882 18464 28317 31497";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -94,7 +94,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput7()
         {
-            string input = File.ReadAllText("input\\longinput7.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput7.txt"));
             string expected = "9139 17687 25106 26202 27592 30937";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
@@ -102,7 +102,7 @@ namespace UnitTests
         [Fact]
         public void TestISWithLargeInput8()
         {
-            string input = File.ReadAllText("input\\longinput8.txt");
+            string input = File.ReadAllText(Path.Combine("input", "longinput8.txt"));
             string expected = "918 1089 5133 7725 18035 24605 26716 27095";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
