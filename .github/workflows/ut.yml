@@ -25,12 +25,7 @@ jobs:
       working-directory: src/LIS/LIS  
     
     - name: Test
-      run: |
-        dotnet test \
-          --no-build \
-          --no-restore \
-          --collect:"XPlat Code Coverage" \
-          -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
+      run: dotnet test --no-build --no-restore  --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
       working-directory: tests/UnitTests
     - name: Upload Coverage Report
       uses: actions/upload-artifact@v4
