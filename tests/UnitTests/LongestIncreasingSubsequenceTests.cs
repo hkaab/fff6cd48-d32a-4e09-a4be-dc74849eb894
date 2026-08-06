@@ -7,7 +7,7 @@ namespace UnitTests
         [Theory]
         [InlineData("6 1 5 9 2", "1 5 9")]
         [InlineData("6 2 4 6 1 5 9 2", "2 4 6")]
-        public void TestLISWithMultipleCases(string nums,string expected)
+        public void TestLISWithMultipleCases(string nums, string expected)
         {
             var result = LongestIncreasingSubsequence.Find(nums);
             Assert.Equal(expected, result);
@@ -44,9 +44,21 @@ namespace UnitTests
             Assert.Equal("-1", result);
         }
         [Fact]
+        public void TestLISWithMixedNumbers()
+        {
+            var result = LongestIncreasingSubsequence.Find("-1 0 1 -2 2 -3 3");
+            Assert.Equal("-1 0 1", result);
+        }
+        [Fact]
+        public void TestLISWithDuplicates()
+        {
+            var result = LongestIncreasingSubsequence.Find("1 2 2 3 3 4");
+            Assert.Equal("1 2", result);
+        }
+        [Fact]
         public void TestISWithLargeInput1()
         {
-            string input = File.ReadAllText(Path.Combine("input","longinput1.txt"));
+            string input = File.ReadAllText(Path.Combine("input", "longinput1.txt"));
             string expected = "1710 2461 9288 10195 10431 12485";
             var result = LongestIncreasingSubsequence.Find(input);
             Assert.Equal(expected, result);
