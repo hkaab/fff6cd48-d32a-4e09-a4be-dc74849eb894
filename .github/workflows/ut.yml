@@ -23,7 +23,7 @@ jobs:
       run: dotnet build --no-restore
       working-directory: src/LIS/LIS  
     - name: Test
-      run:  dotnet test  --settings coverlet.runsettings --collect:"XPlat Code Coverage"
+      run:  dotnet test  --settings ../../coverlet.runsettings --collect:"XPlat Code Coverage"
       working-directory: tests/UnitTests 
     - name: Upload Coverage Report
       uses: actions/upload-artifact@v4
