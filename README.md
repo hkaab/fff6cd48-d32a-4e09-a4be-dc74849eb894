@@ -70,7 +70,7 @@ Numbers are passed as space-separated command-line arguments. Negative numbers, 
 ## Running with Docker
 
 ```bash
-docker compose up
+docker compose run --rm consoleapp 6 1 5 9 2
 ```
 
 This builds and runs the console app in a container (see `src/LIS/LIS/Dockerfile`). Since it's an interactive console app, `docker-compose.yml` keeps `stdin_open` and `tty` enabled so you can attach to it.
