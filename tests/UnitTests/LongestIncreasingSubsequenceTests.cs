@@ -50,6 +50,15 @@ namespace UnitTests
             Assert.Equal("-1 0 1", result);
         }
         [Fact]
+        public void TestLISWithStringInputShouldThrowFormatException()
+        {
+            var exception = Assert.Throws<FormatException>(() =>
+                LongestIncreasingSubsequence.Find("a b c d e"));
+
+            Assert.Equal("The input string 'a' was not in a correct format.", exception.Message);
+
+        }
+        [Fact]
         public void TestLISWithDuplicates()
         {
             var result = LongestIncreasingSubsequence.Find("1 2 2 3 3 4");
