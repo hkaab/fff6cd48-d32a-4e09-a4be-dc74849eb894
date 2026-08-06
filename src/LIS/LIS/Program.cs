@@ -13,8 +13,8 @@ try
     var result = LongestIncreasingSubsequence.Find(input);
 
     Console.WriteLine($"Input      :  {input}");
-    Console.WriteLine($"LIS Length : {result.Length}");
-    Console.WriteLine($"LIS        :  result.Sequence]");
+    Console.WriteLine($"LIS Length :  {result.Split(" ").Length}");
+    Console.WriteLine($"LIS        :  {result}");
 }
 catch (FormatException)
 {
