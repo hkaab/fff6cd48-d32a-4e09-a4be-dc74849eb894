@@ -2,8 +2,8 @@ version: '3.8'
 services:
   consoleapp:
     build:
-      context: .
-      dockerfile: src/LIS/LIS/Dockerfile
+      context: src
+      dockerfile: LIS/LIS/Dockerfile
     container_name: greedy-naive-lis
     restart: "no"
     stdin_open: true
