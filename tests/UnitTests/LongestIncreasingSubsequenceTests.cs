@@ -59,6 +59,18 @@ namespace UnitTests
 
         }
         [Fact]
+        public void TestLISWithNullInput()
+        {
+            var result = LongestIncreasingSubsequence.Find(null);
+            Assert.Equal(string.Empty, result);
+        }
+        [Fact]
+        public void TestLISWithWhitespaceInput()
+        {
+            var result = LongestIncreasingSubsequence.Find("   ");
+            Assert.Equal(string.Empty, result);
+        }
+        [Fact]
         public void TestLISWithDuplicates()
         {
             var result = LongestIncreasingSubsequence.Find("1 2 2 3 3 4");
