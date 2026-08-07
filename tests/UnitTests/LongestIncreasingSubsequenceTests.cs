@@ -50,13 +50,31 @@ namespace UnitTests
             Assert.Equal("-1 0 1", result);
         }
         [Fact]
-        public void TestLISWithStringInputShouldThrowFormatException()
+        public void Find_WithInvalidToken_ThrowsArgumentException()
         {
-            var exception = Assert.Throws<FormatException>(() =>
-                LongestIncreasingSubsequence.Find("a b c d e"));
+            Assert.Throws<ArgumentException>(() =>
+                LongestIncreasingSubsequence.Find("1 2 a 4"));
+        }
 
-            Assert.Equal("The input string 'a' was not in a correct format.", exception.Message);
+        [Fact]
+        public void Find_WithLettersOnly_ThrowsArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+                LongestIncreasingSubsequence.Find("a b c d"));
+        }
 
+        [Fact]
+        public void Find_WithDecimalNumber_ThrowsArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+                LongestIncreasingSubsequence.Find("1 2.5 3"));
+        }
+
+        [Fact]
+        public void Find_WithOverflowInteger_ThrowsArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+                LongestIncreasingSubsequence.Find("1 999999999999999999999 2"));
         }
         [Fact]
         public void TestLISWithNullInput()
