@@ -13,6 +13,7 @@ $ dotnet run 6 1 5 9 2
 Input      : 6 1 5 9 2
 LIS Length : 3
 LIS        : 1 5 9
+Execution  :  7.5530 ms
 ```
 
 ## How it works
